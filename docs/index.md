@@ -16,3 +16,4 @@ to decide what methodologies to use on a case-by-case basis.
 
 ## Resources
 - [React Docs](https://reactjs.org/)
+- Create React App
