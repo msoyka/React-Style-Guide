@@ -1,64 +1,34 @@
-# React Style Guide
+# Airbnb React/JSX Style Guide
 
-*A benchmark for writing clean React, Javascript, & JSX*
+*A mostly reasonable approach to React and JSX*
 
-This style guide is based on prevalent industry standards, however it is still up to the developer
-to decide what methodologies to use on a case-by-case basis.
+This style guide is mostly based on the standards that are currently prevalent in JavaScript, although some conventions (i.e async/await or static class fields) may still be included or prohibited on a case-by-case basis. Currently, anything prior to stage 3 is not included nor recommended in this guide.
 
 ## Table of Contents
 
-  1. [Resources](#resources)
-  2. [Basic React Principles](basic-react-principles.md)
-  <!-- 2. [Class vs `React.createClass` vs stateless](#class-vs-reactcreateclass-vs-stateless)
-  3. [Mixins](#mixins)
-  4. [Naming](#naming)
-  5. [Declaration](#declaration)
-  6. [Alignment](#alignment)
-  7. [Quotes](#quotes)
-  8. [Spacing](#spacing)
-  9. [Props](#props)
-  10. [Refs](#refs)
-  11. [Parentheses](#parentheses)
-  12. [Tags](#tags)
-  13. [Methods](#methods)
-  14. [Ordering](#ordering)
-  15. [`isMounted`](#ismounted) -->
+  1. [Basic Rules](#basic-rules)
+  1. [Class vs `React.createClass` vs stateless](#class-vs-reactcreateclass-vs-stateless)
+  1. [Mixins](#mixins)
+  1. [Naming](#naming)
+  1. [Declaration](#declaration)
+  1. [Alignment](#alignment)
+  1. [Quotes](#quotes)
+  1. [Spacing](#spacing)
+  1. [Props](#props)
+  1. [Refs](#refs)
+  1. [Parentheses](#parentheses)
+  1. [Tags](#tags)
+  1. [Methods](#methods)
+  1. [Ordering](#ordering)
+  1. [`isMounted`](#ismounted)
 
-## Resources
-- [React Docs](https://reactjs.org/)
+## Basic Rules
 
-## Basic React Principles
-
-  - React is a JavaScript library, not a framework.
-    - Libraries differ from frameworks by their relationship to the parent application using them. Frameworks dictate the entire applications structure while libraries give the developer the freedom to make their own application design decisions.
   - Only include one React component per file.
-  - Always use [JSX syntax](https://reactjs.org/docs/introducing-jsx.html).
-  - Always use [React Hooks](https://reactjs.org/docs/hooks-intro.html)
-    - Only use React Class Components when they are truly required.
-
-## Basic Javascript Principles
-  - Destructure [objects](airbnb.md)
-  - 
-
-## Coding Methodologies & Standards 
-  - Prioritize readability, reusability, and scalability when writing components.*Your fellow developers will thank you*
-    - Keep It Stupid Simple
-    - Clear vs Clever
-    - Single Responsibility Principle.
-    - Keep component files small. *(under 100 lines of code)*
-
-## React Ecosystem Recommendations
-
-### Typescript
-
-
-
-
-
-
-
-
-<!-- 
+    - However, multiple [Stateless, or Pure, Components](https://facebook.github.io/react/docs/reusable-components.html#stateless-functions) are allowed per file. eslint: [`react/no-multi-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless).
+  - Always use JSX syntax.
+  - Do not use `React.createElement` unless you’re initializing the app from a file that is not JSX.
+  - [`react/forbid-prop-types`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md) will allow `arrays` and `objects` only if it is explicitly noted what `array` and `object` contains, using `arrayOf`, `objectOf`, or `shape`.
 
 ## Class vs `React.createClass` vs stateless
 
@@ -665,19 +635,19 @@ We don’t recommend using indexes for keys if the order of items may change.
   - Ordering for `class extends React.Component`:
 
   1. optional `static` methods
-  2. `constructor`
-  3. `getChildContext`
-  4. `componentWillMount`
-  5. `componentDidMount`
-  6. `componentWillReceiveProps`
-  7. `shouldComponentUpdate`
-  8. `componentWillUpdate`
-  9. `componentDidUpdate`
-  10. `componentWillUnmount`
-  11. *clickHandlers or eventHandlers* like `onClickSubmit()` or `onChangeDescription()`
-  12. *getter methods for `render`* like `getSelectReason()` or `getFooterContent()`
-  13. *optional render methods* like `renderNavigation()` or `renderProfilePicture()`
-  14. `render`
+  1. `constructor`
+  1. `getChildContext`
+  1. `componentWillMount`
+  1. `componentDidMount`
+  1. `componentWillReceiveProps`
+  1. `shouldComponentUpdate`
+  1. `componentWillUpdate`
+  1. `componentDidUpdate`
+  1. `componentWillUnmount`
+  1. *clickHandlers or eventHandlers* like `onClickSubmit()` or `onChangeDescription()`
+  1. *getter methods for `render`* like `getSelectReason()` or `getFooterContent()`
+  1. *optional render methods* like `renderNavigation()` or `renderProfilePicture()`
+  1. `render`
 
   - How to define `propTypes`, `defaultProps`, `contextTypes`, etc...
 
@@ -743,4 +713,21 @@ We don’t recommend using indexes for keys if the order of items may change.
 
   [anti-pattern]: https://facebook.github.io/react/blog/2015/12/16/ismounted-antipattern.html
 
-**[⬆ back to top](#table-of-contents)** -->
+## Translation
+
+  This JSX/React style guide is also available in other languages:
+
+  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Chinese (Simplified)**: [JasonBoy/javascript](https://github.com/JasonBoy/javascript/tree/master/react)
+  - ![tw](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png) **Chinese (Traditional)**: [jigsawye/javascript](https://github.com/jigsawye/javascript/tree/master/react)
+  - ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png) **Español**: [agrcrobles/javascript](https://github.com/agrcrobles/javascript/tree/master/react)
+  - ![jp](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Japan.png) **Japanese**: [mitsuruog/javascript-style-guide](https://github.com/mitsuruog/javascript-style-guide/tree/master/react)
+  - ![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **Korean**: [apple77y/javascript](https://github.com/apple77y/javascript/tree/master/react)
+  - ![pl](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Poland.png) **Polish**: [pietraszekl/javascript](https://github.com/pietraszekl/javascript/tree/master/react)
+  - ![Br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **Portuguese**: [ronal2do/javascript](https://github.com/ronal2do/airbnb-react-styleguide)
+  - ![ru](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Russia.png) **Russian**: [leonidlebedev/javascript-airbnb](https://github.com/leonidlebedev/javascript-airbnb/tree/master/react)
+  - ![th](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Thailand.png) **Thai**: [lvarayut/javascript-style-guide](https://github.com/lvarayut/javascript-style-guide/tree/master/react)
+  - ![tr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Turkey.png) **Turkish**: [alioguzhan/react-style-guide](https://github.com/alioguzhan/react-style-guide)
+  - ![ua](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png) **Ukrainian**: [ivanzusko/javascript](https://github.com/ivanzusko/javascript/tree/master/react)
+  - ![vn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **Vietnam**: [uetcodecamp/jsx-style-guide](https://github.com/UETCodeCamp/jsx-style-guide)
+
+**[⬆ back to top](#table-of-contents)**
