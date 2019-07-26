@@ -1,5 +1,7 @@
 ---
+layout: default
 title: React Style Guide
+description: A benchmark for writing clean React, Javascript, & JSX
 ---
 
 _A benchmark for writing clean React, Javascript, & JSX_
