@@ -6,6 +6,7 @@ description: A benchmark for writing clean React, Javascript, & JSX
 
 _A benchmark for writing clean React, Javascript, & JSX_
 
+New
 This style guide is based on prevalent industry standards, however it is still up to the developer
 to decide what methodologies to use on a case-by-case basis.
 
