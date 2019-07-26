@@ -1,4 +1,6 @@
-# Basic React Principles
+---
+title: Advanced React Principles
+---
 
 - [Context](https://reactjs.org/docs/context.html)
 - [Fragments](https://reactjs.org/docs/fragments.html)

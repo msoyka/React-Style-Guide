@@ -1,5 +1,5 @@
-# React Ecosystem Recommendations
+---
+title: React Ecosystem Recommendations
+---
 
-Typescript [docs](https://www.typescriptlang.org/)
----------------
-
+## Typescript [docs](https://www.typescriptlang.org/)

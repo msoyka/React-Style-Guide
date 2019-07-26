@@ -1,3 +1,5 @@
-# Thinking in React
+---
+title: Thinking in React
+---
 
 [docs](https://reactjs.org/docs/thinking-in-react.html)

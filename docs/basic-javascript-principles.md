@@ -1,30 +1,32 @@
-# Basic Javascript ES6 Principles
+---
+title: Basic Javascript ES6 Principles
+---
 
-[Object Destructuring]((https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment))
----------------
+## [Object Destructuring](<(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)>)
+
 > Object destructuring, or assignment destructuring, unpacks values from arrays, or properties from objects, into distinct variables.
 
-```jsx 
-const apple = {color: 'red', size: 'small'};
-const {color, size} = apple;
+```jsx
+const apple = { color: "red", size: "small" };
+const { color, size } = apple;
 
 console.log(color); // red
 ```
 
 ---
 
-[Arrow Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
----------------
+## [Arrow Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
 > An arrow function expression is a syntactically compact alternative to a regular function expression and works well with React components becuase is creates its own bindings to `this`, which previously had to be done manually.
 
-```jsx 
-const functionName = (param1, param2, …, paramN) => statements; 
+```jsx
+const functionName = (param1, param2, …, paramN) => statements;
 ```
 
 ---
 
-[Const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) / [Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) Variable Declarations
----------------
+## [Const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) / [Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) Variable Declarations
+
 > - Introduce block level scoping in our code.
 > - Remove variable hoisting.
 > - Const is used for values that don't change
@@ -35,7 +37,7 @@ const number = 42;
 
 try {
   number = 99;
-} catch(err) {
+} catch (err) {
   console.log(err);
   // expected output: TypeError: invalid assignment to const `number'
   // Note - error messages will vary depending on browser
@@ -61,8 +63,8 @@ console.log(x);
 
 ---
 
-[Spread Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
----------------
+## [Spread Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
 Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
 
 ```jsx
@@ -79,8 +81,8 @@ console.log(arr); // [1, 2, 3, 4, 5, 6]
 
 ---
 
-[Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) Method
----------------
+## [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) Method
+
 The map() method creates a new array with the results of calling a provided function on every element in the calling array. As it pertains to React, you can map through data array, and return a new array of React components or HTML elements wrapping the data. In addition, all React components that return multiple elements are wrapped in an array, so using the `.map()` method ties into React nicely.
 
 ```jsx
@@ -95,21 +97,20 @@ console.log(colorList);
 
 ---
 
-[Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
----------------
+## [Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+
 Modules allow Javascript developers to separate pieces of code into new files, export that code, and then import them as a shared resource in another file. The increases the ease of following modular development principles natively within Javascript.
 
 JavaScript has had modules for a long time. However, they were implemented via libraries, not built into the language. ES6 is the first time that JavaScript has built-in modules.
 
-
 ```jsx
 // 📁 lib/shout.js
-export const shout = (string) => `${string.toUpperCase()}!`;
+export const shout = string => `${string.toUpperCase()}!`;
 ```
 
 ```jsx
 // 📁 index.js
-import {shout} from './lib/shout.js';
+import { shout } from "./lib/shout.js";
 
-const shoutHello = () => shout('Hello');
+const shoutHello = () => shout("Hello");
 ```
