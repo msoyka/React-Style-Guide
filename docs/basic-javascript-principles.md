@@ -1,5 +1,6 @@
 ---
 title: Basic Javascript ES6 Principles
+description: This is the description
 ---
 
 ## [Object Destructuring](<(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)>)

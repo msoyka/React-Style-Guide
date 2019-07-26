@@ -1,5 +1,6 @@
 ---
 title: Advanced React Principles
+description: This is the description
 ---
 
 - [Context](https://reactjs.org/docs/context.html)
