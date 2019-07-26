@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Advanced React Principles
 description: This is the description
 ---

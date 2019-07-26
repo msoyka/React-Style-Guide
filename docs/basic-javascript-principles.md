@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Basic Javascript ES6 Principles
 description: This is the description
 ---
